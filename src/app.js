@@ -52,7 +52,7 @@ export default (async function () {
     `<p>Company: <a href=${currentCompany.url} target="_blank">${currentCompany.title}</a></p>
           <p>Industry: ${currentCompany.industry}</p>` : ''}`;
     userData.className = 'user_data';
-    userData.innerHTML = `<a href="#" onclick="handleClick()">${order.user_id} ${currentUser.gender === 'Male' ? 'Mr' : 'Ms'} ${currentUser.first_name} ${currentUser.last_name}</a>`;
+    userData.innerHTML = `<a href="#" id="user">${order.user_id} ${currentUser.gender === 'Male' ? 'Mr' : 'Ms'} ${currentUser.first_name} ${currentUser.last_name}</a>`;
     userData.appendChild(userDetails);
     orderDate.innerHTML = new Date(order.created_at * 1000).toLocaleString();
     orderAmount.innerHTML = `$${order.total}`;
@@ -61,6 +61,7 @@ export default (async function () {
       ${order.card_number.substr(cardNumberLength - AMOUNT_OF_SHOWN_CHARS_END)}`;
     cardType.innerHTML = order.card_type;
     location.innerHTML = `${order.order_country} (${order.order_ip})`;
+
 
     tr.appendChild(transactionId);
     tr.appendChild(userData);
@@ -71,6 +72,7 @@ export default (async function () {
     tr.appendChild(location);
 
     tbody.appendChild(tr);
+    document.getElementById('user').addEventListener('click', handleClick);
   });
 
   // next line is for example only
