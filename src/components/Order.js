@@ -61,7 +61,6 @@ export class Order {
             }
             return sum;
         },0);
-        console.log(fCounter);
         ordersCount.innerHTML = `<td colspan="3">Orders Count</td><td colspan="3">${data.length}</td>`;
         ordersTotal.innerHTML = `<td colspan="3">Orders Total</td><td colspan="3" class="currency">${total}</td>`;
         medianValue.innerHTML = `<td colspan="3">Median Value</td><td colspan="3" class="currency">${sorted.length % 2 === 0 ?
@@ -71,6 +70,7 @@ export class Order {
         averageCheckF.innerHTML = `<td colspan="3">Average Check (Female)</td><td colspan="3" class="currency">${totalFemale/fCounter}</td>`;
         averageCheckM.innerHTML = `<td colspan="3">Average Check (Male)</td><td colspan="3" class="currency">${(total - totalFemale)/(data.length - fCounter)}</td>`;
         const statistic = document.createElement('table');
+        statistic.classList.add('table', 'table-dark');
         statistic.appendChild(ordersCount);
         statistic.appendChild(ordersTotal);
         statistic.appendChild(medianValue);

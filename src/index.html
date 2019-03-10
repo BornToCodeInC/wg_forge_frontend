@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>WG Forge Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
-        <table>
+        <table class="table table-dark table-striped table-hover">
             <thead>
                 <tr>
-                    <th>Search:</th>
-                    <th><input type="text" id="search"></th>
+                    <th scope="col" >Search:</th>
+                    <th scope="col" colspan="3"><input type="text" id="search" class="form-control" placeholder="search"></th>
                 </tr>
                 <tr>
-                    <th datatype="string" class="th">Transaction ID</th>
-                    <th datatype="link" class="th">User Info</th>
-                    <th datatype="date" class="th">Order Date</th>
-                    <th datatype="number" class="th">Order Amount</th>
-                    <th datatype="null" class="th">Card Number</th>
-                    <th datatype="string" class="th">Card Type</th>
-                    <th datatype="string" class="th">Location</th>
+                    <th datatype="string" class="th" scope="col">Transaction ID</th>
+                    <th datatype="link" class="th" scope="col">User Info</th>
+                    <th datatype="date" class="th" scope="col">Order Date</th>
+                    <th datatype="number" class="th" scope="col">Order Amount</th>
+                    <th datatype="null" class="th" scope="col">Card Number</th>
+                    <th datatype="string" class="th" scope="col">Card Type</th>
+                    <th datatype="string" class="th" scope="col">Location</th>
                 </tr>
                 <tr>
                     <td class="hidden" id="empty-result">Nothing found</td>

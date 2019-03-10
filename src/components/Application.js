@@ -70,7 +70,6 @@ export class Application {
                         tr[i].style.display = "";
                         break;
                     } else {
-                        console.log('jhkj', tr.length);
                         tr[i].style.display = "none";
                     }
                 }
