@@ -1,0 +1,27 @@
+.th {
+  cursor: pointer;
+  padding: 10px 40px;
+  background-color: #add8e6;
+}
+
+tr {
+  height: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.currency:before {
+  content: '$ ';
+}
+
+a {
+  text-decoration: none;
+  color: #2d4472;
+  font-weight: bold;
+
+  &:hover {
+    color: #315eb7;
+  }
+}

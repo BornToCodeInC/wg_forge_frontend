@@ -9,16 +9,23 @@
         <table>
             <thead>
                 <tr>
-                    <th>Transaction ID</th>
-                    <th>User Info</th>
-                    <th>Order Date</th>
-                    <th>Order Amount</th>
-                    <th>Card Number</th>
-                    <th>Card Type</th>
-                    <th>Location</th>
+                    <th>Search:</th>
+                    <th><input type="text" id="search"></th>
+                </tr>
+                <tr>
+                    <th datatype="string" class="th">Transaction ID</th>
+                    <th datatype="link" class="th">User Info</th>
+                    <th datatype="date" class="th">Order Date</th>
+                    <th datatype="number" class="th">Order Amount</th>
+                    <th datatype="null" class="th">Card Number</th>
+                    <th datatype="string" class="th">Card Type</th>
+                    <th datatype="string" class="th">Location</th>
+                </tr>
+                <tr>
+                    <td class="hidden" id="empty-result">Nothing found</td>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="tbody">
             </tbody>
         </table>
     </div>
